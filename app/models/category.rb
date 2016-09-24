@@ -8,4 +8,5 @@ class Category < ApplicationRecord
 			end
 		end
 	end
+	has_many :products
 end
