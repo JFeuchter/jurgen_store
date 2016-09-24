@@ -5,12 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-=begin
+
 Category.destroy_all
 ProductType.destroy_all
 Vendor.destroy_all
 Tax.destroy_all
-=end
+
 electronic = Category.create name: "Electronics"
 book = Category.create name: "Books"
 movie = Category.create name: "Movies"

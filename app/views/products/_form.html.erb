@@ -38,8 +38,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :product_type %>
-    <%= f.select :product_type, @product_types.collect{|product_type| [product_type.name, product_type.id]}, 
+    <%= f.label :product_type_id %>
+    <%= f.select :product_type_id, @product_types.collect{|product_type| [product_type.name, product_type.id]}, 
     {:include_blank => "Selecciona uno"} %>
   </div>
 
