@@ -1,0 +1,2 @@
+class OrderTax < ApplicationRecord
+end
