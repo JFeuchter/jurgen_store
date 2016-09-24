@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160924170159) do
+ActiveRecord::Schema.define(version: 20160924170326) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "street"
@@ -45,6 +45,18 @@ ActiveRecord::Schema.define(version: 20160924170159) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "order_items", force: :cascade do |t|
+    t.string   "type"
+    t.integer  "shipping_id"
+    t.integer  "cart_id"
+    t.integer  "tax_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["cart_id"], name: "index_order_items_on_cart_id"
+    t.index ["shipping_id"], name: "index_order_items_on_shipping_id"
+    t.index ["tax_id"], name: "index_order_items_on_tax_id"
   end
 
   create_table "orders", force: :cascade do |t|
